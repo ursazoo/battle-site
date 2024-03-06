@@ -10,7 +10,15 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
-  vite: {},
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "@/assets/styles/color.scss" as *;',
+        },
+      },
+    },
+  },
   modules: ['@pinia/nuxt'],
   alias: {
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>post</div>
+    <div class="title">post</div>
     <NuxtLink to="/">index</NuxtLink>
   </div>
 </template>
@@ -33,3 +33,10 @@ useServerSeoMeta({
 
 console.log(globalStore.count);
 </script>
+
+<style scoped lang="scss">
+.title {
+  color: $primary;
+  font-size: 10px;
+}
+</style>
