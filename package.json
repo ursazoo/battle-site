@@ -4,7 +4,8 @@
   "type": "module",
   "scripts": {
     "build": "nuxt build",
-    "dev": "nuxt dev -o",
+    "dev": "nuxt dev -o  --dotenv .env",
+    "dev:ra": "nuxt dev -o  --dotenv .env",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -16,5 +17,9 @@
     "sass": "^1.71.1",
     "vue": "^3.4.19",
     "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@element-plus/nuxt": "^1.0.7",
+    "element-plus": "^2.6.1"
   }
 }

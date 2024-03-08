@@ -2,15 +2,18 @@
   <div>
     <div class="title">post</div>
     <NuxtLink to="/">index</NuxtLink>
+    <el-button @click="ElMessage('hello')">button</el-button>
   </div>
 </template>
 
 <script lang="ts" setup>
+import { ElMessage } from 'element-plus';
+
 import { useGlobalStore } from '@/stores/global';
 const globalStore = useGlobalStore();
 
 definePageMeta({
-  layout: 'custom', // 值为字符串时，是layouts/下对应的文件；值为false时，当前路由不使用layout
+  layout: 'default', // 值为字符串时，是layouts/下对应的文件；值为false时，当前路由不使用layout
 });
 
 useServerSeoMeta({

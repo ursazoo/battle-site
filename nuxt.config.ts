@@ -19,8 +19,17 @@ export default defineNuxtConfig({
       },
     },
   },
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', '@element-plus/nuxt'],
+  // elementPlus: {
+  //   /** Options */
+  // },
   alias: {
     images: fileURLToPath(new URL('./assets/images', import.meta.url)),
+  },
+  runtimeConfig: {
+    apiSecret: '', // 可以被 NUXT_API_SECRET 环境变量覆盖
+    public: {
+      apiBase: '', // 可以被 NUXT_PUBLIC_API_BASE 环境变量覆盖
+    },
   },
 });
